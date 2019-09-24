@@ -1,6 +1,6 @@
 import 'package:flutter/material.dart';
 
-import 'calendar-page.dart';
+import 'page-handler/calendar-page.dart';
 import 'finances-page.dart';
 
 class MainNavigationPage extends StatefulWidget
@@ -39,6 +39,7 @@ class _MainNavigationPageState extends State<MainNavigationPage>
     );
   }
 
+  //returns the correct page based on the navigation index.
   Widget _getBody()
   {
     switch(_selectedIndex)
@@ -52,6 +53,7 @@ class _MainNavigationPageState extends State<MainNavigationPage>
     return Text("ERROR");
   }
 
+  //Method used when the nagivation items are tapped.
   void _onItemTapped(int index) {
     setState(() {
       _selectedIndex = index;
