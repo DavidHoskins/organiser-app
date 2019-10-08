@@ -1,3 +1,4 @@
+import 'package:flutter/material.dart';
 import 'package:path/path.dart';
 import 'package:sqflite/sqflite.dart';
 import 'dart:async';
@@ -47,7 +48,7 @@ class DBProvider
               "${AppointmentTable.endTime} INTEGER,"
               "${AppointmentTable.title} STRING,"
               "${AppointmentTable.disc} STRING,"
-              "${AppointmentTable.dateTime} INTEGER"
+              "${AppointmentTable.dateTime} STRING"
               ")"
           );
         });

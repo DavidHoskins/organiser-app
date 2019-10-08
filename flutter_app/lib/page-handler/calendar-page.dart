@@ -31,10 +31,16 @@ class _CalendarPageState extends State<CalendarPage>
   void getAppointments() async
   {
     appointments = await DBProvider.db.getAllAppointmentBlocks();
-    debugPrint(appointments.toString());
     for(int i = 0; i < dates.length; i++)
     {
-      dates[i].appointments = appointments;
+      for(int j = 0; j < appointments.length; j++)
+      {
+        if(appointments[j].dateTime == dates[i].getDateString())
+        {
+          debugPrint("${dates[i].getDateString()} is equal to ${appointments[j].dateTime}");
+          dates[i].appointments.add(appointments[j]);
+        }
+      }
     }
     dataLoaded = true;
   }

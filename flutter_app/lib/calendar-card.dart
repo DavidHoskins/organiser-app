@@ -10,7 +10,7 @@ class CalendarCard extends SmallCard
 
   CalendarCard(int index, this._date)
   {
-    _date.getDateTime(index);
+    _date.updateDateTime(index);
     leadingElement = FlutterLogo();
     titleElement = Text(_date.getDateString());
     pageRoute = MaterialPageRoute(builder: (context) => DatePage(_date));

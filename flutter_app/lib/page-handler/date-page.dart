@@ -32,7 +32,7 @@ class _DatePageState extends State<DatePage>
         {
           setState(()
           {
-            _date.appointments.add(AppointmentBlock.createNewAppointmentBlock(10, 11, "ADDED", "STUFF"));
+            _date.appointments.add(AppointmentBlock.createNewAppointmentBlock(10, 11, "ADDED", "STUFF", _date.getDateString()));
           });
         }
       ),

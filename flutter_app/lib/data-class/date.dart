@@ -8,13 +8,7 @@ class Date
 
   List<AppointmentBlock> appointments = List<AppointmentBlock>();
 
-  Date(this._date)
-  {
-    for(int i = 0; i < 10; i++)
-    {
-      //appointments.add(AppointmentBlock.createNewAppointmentBlock(i, (i+1), "TEST", "TEST"));
-    }
-  }
+  Date(this._date);
 
   var _dateTime;
 
@@ -51,7 +45,7 @@ class Date
     return "${_dateTime.day.toString()}th";
   }
 
-  void getDateTime(int index)
+  void updateDateTime(int index)
   {
     _dateTime = DateTime.fromMillisecondsSinceEpoch(DateTime.now().millisecondsSinceEpoch + (index * 86400000));
   }
