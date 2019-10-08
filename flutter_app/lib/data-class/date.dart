@@ -12,7 +12,7 @@ class Date
   {
     for(int i = 0; i < 10; i++)
     {
-      appointments.add(new AppointmentBlock(i, (i+1), "TEST", "TEST"));
+      //appointments.add(AppointmentBlock.createNewAppointmentBlock(i, (i+1), "TEST", "TEST"));
     }
   }
 

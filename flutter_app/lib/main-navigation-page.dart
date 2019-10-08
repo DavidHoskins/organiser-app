@@ -10,6 +10,12 @@ class MainNavigationPage extends StatefulWidget
 
 class _MainNavigationPageState extends State<MainNavigationPage>
 {
+  initState()
+  {
+    super.initState();
+
+  }
+
   int _selectedIndex = 0;
 
   Widget build(BuildContext context)
